@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Feedback</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="./style.css">
+  <style>
+    /*<======section feedback form start ======!> */ 
+
+.feedback-form-container {
+    max-width: 500px;
+    margin: 120px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0px 5px 15px rgba(202, 237, 159, 0.2);
+    background-color: #f9f9f9;
+    animation: slideIn 1s ease-in-out;
+  }
+  @keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+  .feedback-form-container h2 {
+    text-align: center;
+    
+  }
+  
+  label {
+    display: block;
+    margin: 10px 0 5px;
+  }
+  
+  input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .btn-feedback:hover {
+    box-shadow:mediumvioletred;
+    background-color: #584646;
+  } 
+  
+  .response-message {
+    margin-top: 20px;
+    text-align: center;
+    color: green;
+    display: none;
+  }
+  
+
+    .video-container {
+      transform: translateY(-50%) rotateY(0deg);
+      width: 200px;
+      height: 200px;
+      z-index: 99999;
+      pointer-events: none;
+      animation: rotate3D 5s linear infinite;
+    }
+
+    @keyframes rotate3D {
+      from {
+        transform: translateY(-50%) rotateY(0deg);
+      }
+
+      to {
+        transform: translateY(-50%) rotateY(360deg);
+      }
+    }
+
+
+    html,
+    body {
+      min-height: 100%;
+      overflow-x: hidden;
+      margin: 0;
+      padding: 0;
+      position: relative;
+    }
+
+
+    .video-container img {
+      width: 250px;
+      height: 250px;
+      filter: drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.5));
+    }
+
+    .feedback-main-container {
+      display: flex;
+      width: 100vw;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .extra-feedback-space-container {
+      width: 25%;
+    }
+
+    .video-main-feedback-container {
+      width: 25%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .feedback-main-feedback-container {
+      width: 50%;
+    }
+      /* <=== section feedback form end  ===!>*/
+
+  </style>
+</head>
+<body>
+<header>
+  <!-- <===navbar start===!>  -->
+<!-- Ultimate Brown Navbar -->
+<nav class="navbar navbar-expand-lg custom-navbar">
+<div class="container">
+<a class="navbar-brand" href="#">
+<img src="./logo2-removebg-preview.png" alt="Logo" class="logo">
+</a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
+aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+<ul class="navbar-nav">
+<li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+<li class="nav-item"><a class="nav-link" href="./aboutus.html">About Us</a></li>
+<li class="nav-item"><a class="nav-link" href="./product-card.html">Products</a></li>
+<li class="nav-item"><a class="nav-link" href="./Gellary.html">Gallery</a></li>
+<li class="nav-item"><a class="nav-link" href="./contact.html">Contact Us</a></li>
+<li class="nav-item"><a class="nav-link" href="./feedback.html">Feedback</a></li>
+</ul>
+</div>
+</div>
+</nav>
+</header>
+  <main class="feedback-main-container">
+    <div class="video-main-feedback-container">
+      <div class="video-container">
+        <img src="./istockphoto-2154981201-640-adp-unscreen.gif" alt="Animated GIF" width="230px" height="230px">
+      </div>
+    </div>
+    <div class="feedback-main-feedback-container">
+
+      <div class="feedback-form-container">
+        <h2>Feedback Form</h2>
+        <form id="feedbackForm">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" required></textarea>
+          <button class="btn-feedback" type="submit">Submit</button>
+        </form>
+        <div id="responseMessage" class="response-message"></div>
+      </div>
+    </div>
+    <div class="extra-feedback-space-container">
+
+    </div>
+
+  </main>
+  <footer>
+    <!-- place footer here -->
+    <div class="container-toggel">
+        <footer class="text-center text-lg-start text-white" style="background-color: #333333">
+          <div class="container p-4 pb-0">
+            <section>
+              <div class="row">
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                  <h6 class="text-uppercase mb-4 font-weight-bold">
+                    PASCAL IMITATION JEWELLERY
+                  </h6>
+                  <p>
+                    High-quality imitation jewellery crafted with elegance and precision.
+                  </p>
+                </div>
+    
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                  <h6 class="text-uppercase mb-4 font-weight-bold">Products</h6>
+                  <p><a class="text-white" href="#">Necklaces</a></p>
+                  <p><a class="text-white" href="#">Earrings</a></p>
+                  <p><a class="text-white" href="#">Bracelets</a></p>
+                  <p><a class="text-white" href="#">Rings</a></p>
+                </div>
+    
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                  <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+                  <p><i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
+                  <p><i class="fas fa-envelope mr-3"></i> info@gmail.com</p>
+                  <p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+                  <p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+                </div>
+    
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                  <h6 class="text-uppercase mb-4 font-weight-bold">Follow us</h6>
+    
+                  <a class="btn social-icon facebook" href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a class="btn social-icon twitter" href="#"><i class="fab fa-twitter"></i></a>
+                  <a class="btn social-icon google" href="#"><i class="fab fa-google"></i></a>
+                  <a class="btn social-icon instagram" href="#"><i class="fab fa-instagram"></i></a>
+                  <a class="btn social-icon linkedin" href="#"><i class="fab fa-linkedin-in"></i></a>
+                  <a class="btn social-icon whatsapp" href="#"><i class="fab fa-whatsapp"></i></a>
+    
+                </div>
+              </div>
+            </section>
+          </div>
+    
+          <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+            © 2025 Copyright:
+            <a class="text-white" href="#">&copy; 2025 PASCAL IMITATION JEWELLERY.</a>
+          </div>
+        </footer>
+      </div>
+</footer>
+  <script>
+    document.getElementById('feedbackForm').addEventListener('submit', function (event) {
+      event.preventDefault();
+      const name = document.getElementById('name').value;
+      const responseMessage = document.getElementById('responseMessage');
+      responseMessage.textContent = `Thank you, ${name}! Your feedback has been received.`;
+      responseMessage.style.display = 'block';
+      document.getElementById('feedbackForm').reset();
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
